@@ -59,7 +59,7 @@ const Contact = () => {
 
                             <h1 className="text-4xl font-bold bangla-font text-white tracking-wide sm:text-5xl text-center mb-3">জরুরি প্রয়োজনে কল করুন</h1>
 
-                            <div className='grid grid-cols-1 sm:grid-cols-2 gap-5'>
+                            <div className='grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-5'>
 
                                 {
                                     data?.contacts?.map(contact => <FrontEndContactCard
