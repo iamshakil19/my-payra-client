@@ -9,7 +9,7 @@ const useToken = user => {
         const displayName = user?.user?.displayName
         const currentUser = { email: email, name: displayName }
         if (email) {
-            fetch(`https://payra.onrender.com/user/${email}`, {
+            fetch(`https://my-payra-server.onrender.com/user/${email}`, {
                 method: 'PUT',
                 headers: {
                     'content-type': 'application/json'

@@ -10,7 +10,6 @@ const AddContactForm = ({ setIsFormSubmit }) => {
     const imgStorageKey = '4d9a97f41d4a0d0b543b11f89f06f093';
 
     const onSubmit = data => {
-        console.log(data);
         const fileSize = data?.image[0].size
         if (fileSize > 1000000) {
             setFileError('Maximum file size: 1 MB')
@@ -37,7 +36,7 @@ const AddContactForm = ({ setIsFormSubmit }) => {
                             number2: data.number2,
                             img: img
                         }
-                        fetch('https://payra.onrender.com/admin-contact', {
+                        fetch('https://my-payra-server.onrender.com/admin-contact', {
                             method: 'POST',
                             headers: {
                                 'content-type': 'application/json',

@@ -19,7 +19,7 @@ const IncompleteRequestRow = ({ incompleteSingleBloodRequest, refetch, index, se
             status: newStatus,
             submissionTime: submissionTime
         }
-        fetch(`https://payra.onrender.com/blood-request-status/${_id}`, {
+        fetch(`https://my-payra-server.onrender.com/blood-request-status/${_id}`, {
             method: 'PATCH',
             headers: {
                 'content-type': 'application/json'
@@ -28,7 +28,6 @@ const IncompleteRequestRow = ({ incompleteSingleBloodRequest, refetch, index, se
         })
             .then(res => res.json())
             .then(data => {
-                console.log(data);
                 refetch()
                 setIncompleteRefetch(current => !current)
                 toast.success('Blood Donation Complete')

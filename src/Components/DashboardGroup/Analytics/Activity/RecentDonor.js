@@ -9,7 +9,7 @@ import { useQuery } from 'react-query';
 const RecentDonor = () => {
 
     const navigate = useNavigate()
-    const { data: recentDonor, isLoading, refetch } = useQuery('recentDonor', () => fetch('https://payra.onrender.com/verified-donor', {
+    const { data: recentDonor, isLoading, refetch } = useQuery('recentDonor', () => fetch('https://my-payra-server.onrender.com/verified-donor', {
         method: 'GET',
         headers: {
             'content-type': 'application/json',

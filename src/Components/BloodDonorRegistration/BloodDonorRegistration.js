@@ -27,9 +27,8 @@ const BloodDonorRegistration = () => {
         const upazila = data?.upazila.split(',')[1]
         const union = data?.union.split(',')[1]
         const newData = { ...data, division, district, upazila, union, status }
-        // console.log(newData);
 
-        fetch('https://payra.onrender.com/donor-request', {
+        fetch('https://my-payra-server.onrender.com/donor-request', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -50,7 +49,7 @@ const BloodDonorRegistration = () => {
         toast.error("বিভাগ সিলেক্টে বিভাগ না পেলে ৩০ সেকেন্ড পরে আবার ট্রাই করুন।")
     }, [])
 
-    const { data: divisionData, divisionIsLoading } = useQuery(['allDivisions'], () => fetch('https://payra.onrender.com/divisions', {
+    const { data: divisionData, divisionIsLoading } = useQuery(['allDivisions'], () => fetch('https://my-payra-server.onrender.com/divisions', {
         method: 'GET',
         headers: {
             'content-type': 'application/json',
@@ -59,7 +58,7 @@ const BloodDonorRegistration = () => {
     })
         .then(res => res.json()))
 
-    const { data: districtData, districtIsLoading } = useQuery(['allDistricts'], () => fetch('https://payra.onrender.com/districts', {
+    const { data: districtData, districtIsLoading } = useQuery(['allDistricts'], () => fetch('https://my-payra-server.onrender.com/districts', {
         method: 'GET',
         headers: {
             'content-type': 'application/json',
@@ -68,7 +67,7 @@ const BloodDonorRegistration = () => {
     })
         .then(res => res.json()))
 
-    const { data: upazilaData, upazilaIsLoading } = useQuery(['allUpazilas'], () => fetch('https://payra.onrender.com/upazilasForForm', {
+    const { data: upazilaData, upazilaIsLoading } = useQuery(['allUpazilas'], () => fetch('https://my-payra-server.onrender.com/upazilasForForm', {
         method: 'GET',
         headers: {
             'content-type': 'application/json',
@@ -77,7 +76,7 @@ const BloodDonorRegistration = () => {
     })
         .then(res => res.json()))
 
-    const { data: unionData, unionIsLoading } = useQuery(['allunions'], () => fetch('https://payra.onrender.com/unionsForForm', {
+    const { data: unionData, unionIsLoading } = useQuery(['allunions'], () => fetch('https://my-payra-server.onrender.com/unionsForForm', {
         method: 'GET',
         headers: {
             'content-type': 'application/json',
@@ -86,7 +85,7 @@ const BloodDonorRegistration = () => {
     })
         .then(res => res.json()))
 
-    const { data: villageData, villageIsLoading } = useQuery(['allvillage'], () => fetch('https://payra.onrender.com/villagesForForm', {
+    const { data: villageData, villageIsLoading } = useQuery(['allvillage'], () => fetch('https://my-payra-server.onrender.com/villagesForForm', {
         method: 'GET',
         headers: {
             'content-type': 'application/json',
@@ -104,7 +103,7 @@ const BloodDonorRegistration = () => {
     if (divisionIsLoading || districtIsLoading || upazilaIsLoading || unionIsLoading || villageIsLoading) {
         return <Loading />
     }
-    console.log(unionData);
+
     return (
         <div className='donor-registration-bg min-h-screen'>
             <Header></Header>

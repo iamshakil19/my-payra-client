@@ -5,7 +5,7 @@ const AvailableDeleteModal = ({ availableDonorData, setAvailableDonorData, refet
 
     const { _id } = availableDonorData
     const handleDeleteData = () => {
-        const url = `https://payra.onrender.com/donorRequest/${_id}`;
+        const url = `https://my-payra-server.onrender.com/donorRequest/${_id}`;
         fetch(url, {
             method: "DELETE"
         })

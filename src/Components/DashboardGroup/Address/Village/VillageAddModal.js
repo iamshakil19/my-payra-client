@@ -10,7 +10,7 @@ const VillageAddModal = ({ refetch, setIsVillageAddModal }) => {
         const union_id = Number(data.union_id)
         const newData = { ...data, union_id }
 
-        fetch('https://payra.onrender.com/villages', {
+        fetch('https://my-payra-server.onrender.com/villages', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
@@ -34,8 +34,6 @@ const VillageAddModal = ({ refetch, setIsVillageAddModal }) => {
                     reset()
                 }
             })
-
-        console.log(newData);
     };
 
     return (

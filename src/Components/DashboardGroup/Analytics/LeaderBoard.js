@@ -9,7 +9,7 @@ import Loading from '../../Shared/Loading/Loading';
 const LeaderBoard = () => {
 
     const navigate = useNavigate()
-    const { data: topDonor, isLoading } = useQuery('topDonor', () => fetch('https://payra.onrender.com/top-donor', {
+    const { data: topDonor, isLoading } = useQuery('topDonor', () => fetch('https://my-payra-server.onrender.com/top-donor', {
         method: 'GET',
         headers: {
             'content-type': 'application/json',

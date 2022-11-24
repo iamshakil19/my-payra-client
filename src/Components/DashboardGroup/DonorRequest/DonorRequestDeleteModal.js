@@ -4,7 +4,7 @@ import toast from 'react-hot-toast';
 const DonorRequestDeleteModal = ({ donorData, setDonorData, refetch }) => {
     const { _id } = donorData
     const handleDeleteRequest = () => {
-        const url = `https://payra.onrender.com/donorRequest/${_id}`;
+        const url = `https://my-payra-server.onrender.com/donorRequest/${_id}`;
         fetch(url, {
             method: "DELETE"
         })

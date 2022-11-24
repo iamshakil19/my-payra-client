@@ -9,7 +9,7 @@ import Loading from '../../../Shared/Loading/Loading';
 
 const AdminActivity = () => {
     const navigate = useNavigate()
-    const { data: recentAdmins, isLoading } = useQuery('recentAdmins', () => fetch('https://payra.onrender.com/all-admin', {
+    const { data: recentAdmins, isLoading } = useQuery('recentAdmins', () => fetch('https://my-payra-server.onrender.com/all-admin', {
         method: 'GET',
         headers: {
             'content-type': 'application/json',

@@ -17,7 +17,7 @@ const DonorRequestRow = ({ donorRequest, index, setDonorData, setProfileDonorReq
             status: newStatus,
             acceptedTime: acceptedTime
         }
-        fetch(`https://payra.onrender.com/donorStatus/${_id}`, {
+        fetch(`https://my-payra-server.onrender.com/donorStatus/${_id}`, {
             method: 'PATCH',
             headers: {
                 'content-type': 'application/json'
@@ -26,7 +26,6 @@ const DonorRequestRow = ({ donorRequest, index, setDonorData, setProfileDonorReq
         })
             .then(res => res.json())
             .then(data => {
-                console.log(data);
                 refetch()
                 setIncompleteRefetch(current => !current)
                 toast.success('Donor Verified')

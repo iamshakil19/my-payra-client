@@ -10,8 +10,7 @@ const AvailableDonorEditModal = ({ refetch, editDonorData, setEditDonorData }) =
     const onSubmit = data => {
         const donationNum = Number(data.donationCount)
         const newData = { ...data, donationCount: donationNum }
-        console.log(newData);
-        fetch(`https://payra.onrender.com/donorInfo/${_id}`, {
+        fetch(`https://my-payra-server.onrender.com/donorInfo/${_id}`, {
             method: "PATCH",
             headers: {
                 'content-type': 'application/json',

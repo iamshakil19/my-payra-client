@@ -11,7 +11,7 @@ ChartJS.register(ArcElement, Tooltip, Legend);
 
 const DoughnutChart = () => {
   const navigate = useNavigate()
-  const { data: bloodData, isLoading, refetch } = useQuery('bloodData', () => fetch('https://payra.onrender.com/verified-donor', {
+  const { data: bloodData, isLoading, refetch } = useQuery('bloodData', () => fetch('https://my-payra-server.onrender.com/verified-donor', {
     method: 'GET',
     headers: {
       'content-type': 'application/json',

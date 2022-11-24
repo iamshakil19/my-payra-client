@@ -4,7 +4,7 @@ const AdminDeleteModal = ({ adminDeleteData, setAdminDeleteData, refetch }) => {
 
     const { _id } = adminDeleteData
     const handleDeleteData = () => {
-        const url = `https://payra.onrender.com/deleteUser/${_id}`;
+        const url = `https://my-payra-server.onrender.com/deleteUser/${_id}`;
         fetch(url, {
             method: "DELETE"
         })
