@@ -5,6 +5,10 @@
 * Payra [Server Side Code Link](https://github.com/iamshakil19/my-payra-server)
 
 
+## Demo Admin Account
+### `admin@admin.com`
+### `111111`
+
 ## Website Feature
 
 * This is a blood donation website
