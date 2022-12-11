@@ -104,7 +104,7 @@ const Login = () => {
                                 </div>
 
                                 {loginError}
-
+                                <p className='text-center text-orange-400'>Admin Acc - admin@admin.com - 111111</p>
                                 <input className='bg-[#303640] w-full mt-2 rounded-full btn' type="submit" value="Login" />
                             </form>
                             <p className='text-[15px] ml-2 mt-3'>Need an account ? <span className='text-blue-600 cursor-pointer' onClick={navigateToRegister} >Sign Up</span></p>
